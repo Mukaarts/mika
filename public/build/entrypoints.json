@@ -1,0 +1,15 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_tailwindcss_index_css-c20fdb.js",
+        "/build/app.js"
+      ],
+      "css": [
+        "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_tailwindcss_index_css-c20fdb.css",
+        "/build/app.css"
+      ]
+    }
+  }
+}
