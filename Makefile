@@ -1,43 +1,66 @@
-.PHONY: help init start stop restart db migration fixtures db-reset cc
+.PHONY: help init start stop restart db migration fixtures db-reset cc assets fix lint
 
+# Standard-Hilfe: Zeigt alle Befehle an, wenn du nur "make" tippst
 help: ## Zeigt diese Hilfe an
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-init: ## Projekt initialisieren (Dependencies, DB & Fixtures)
-	@echo "Installiere PHP Dependencies..."
+# --- 🚀 Projekt Start & Setup ---
+
+init: ## Projekt initialisieren (Docker, Dependencies, DB & Fixtures)
+	@echo "🐳 Starte Docker Container..."
+	docker compose up -d
+	@echo "⏳ Warte 10 Sekunden auf Datenbank-Initialisierung..."
+	@sleep 10
+	@echo "📦 Installiere PHP Dependencies..."
 	composer install
-	@echo "Installiere JS Dependencies..."
+	@echo "📦 Installiere JS Dependencies..."
 	npm install
-	@echo "Richte Datenbank ein..."
+	@echo "🗄  Richte Datenbank ein..."
 	php bin/console doctrine:database:create --if-not-exists
 	php bin/console doctrine:migrations:migrate --no-interaction
-	@echo "Lade Testdaten (Fixtures)..."
+	@echo "🌱 Lade Testdaten (Fixtures)..."
 	php bin/console doctrine:fixtures:load --no-interaction
-	@echo "Setup fertig! Starte den Server mit 'make start'"
+	@echo "✅ Setup fertig! Starte den Server mit 'make start'"
 
-start: ## Startet Symfony Server und Tailwind-Watcher
+start: ## Startet Docker, Symfony Server und Asset-Watcher
+	docker compose up -d
 	symfony server:start -d
-	php bin/console tailwind:build --watch
+	npm run watch
 
-stop: ## Stoppt Symfony Server
+stop: ## Stoppt alles (Symfony Server & Docker)
 	symfony server:stop
+	docker compose stop
 
 restart: stop start ## Startet alles neu
 
-db: ## Fuehrt Datenbank-Migrationen aus
+# --- 🛠 Entwicklung & Datenbank ---
+
+db: ## Führt Datenbank-Migrationen aus
 	php bin/console doctrine:migrations:migrate --no-interaction
 
-migration: ## Erstellt eine neue Migration basierend auf Entity-Aenderungen
+migration: ## Erstellt eine neue Migration basierend auf Änderungen an Entities
 	php bin/console make:migration
 
-fixtures: ## Laedt die Testdaten neu
+fixtures: ## Lädt die Testdaten neu (Löscht alte Daten!)
 	php bin/console doctrine:fixtures:load --no-interaction
 
-db-reset: ## Loescht DB, migriert neu & laedt Fixtures
+db-reset: ## ⚠️ ACHTUNG: Löscht DB, migriert neu & lädt Fixtures (Alles frisch!)
 	-php bin/console doctrine:database:drop --force --if-exists
 	php bin/console doctrine:database:create
 	php bin/console doctrine:migrations:migrate --no-interaction
 	php bin/console doctrine:fixtures:load --no-interaction
 
-cc: ## Cache leeren
+# --- 🧹 Tools & Assets ---
+
+cc: ## Cache leeren (Wichtig nach Config-Änderungen)
 	php bin/console cache:clear
+
+assets: ## Baut die Assets für Production (Minifiziert)
+	npm run build
+
+fix: ## Repariert Code-Styles (CS-Fixer)
+	vendor/bin/php-cs-fixer fix
+
+lint: ## TypeScript & ESLint prüfen
+	npx tsc --noEmit
+	npm run lint
