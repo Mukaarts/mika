@@ -9,7 +9,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Figtree:wght@300..900&display=swap" rel="stylesheet">
         {% block stylesheets %}{% endblock %}
+            {{ encore_entry_link_tags('app') }}
         {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
