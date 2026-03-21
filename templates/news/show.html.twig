@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ article.getTitle(app.request.locale) }} — Mika Ferreira{% endblock %}
+
+{% block body %}
+
+    {# === Hero banner === #}
+    <section class="relative pt-36 pb-20 hero-gradient overflow-hidden">
+        <div class="absolute inset-0 hero-pattern"></div>
+        <div class="relative z-10 max-w-3xl mx-auto px-5 sm:px-8 lg:px-10 text-center">
+            <div class="flex items-center justify-center gap-3 mb-6">
+                <time class="text-[0.7rem] text-white/40 tracking-wide" datetime="{{ article.publishedAt|date('Y-m-d') }}">
+                    {{ 'news.published'|trans }} {{ article.publishedAt|date('d.m.Y') }}
+                </time>
+                <span class="px-2.5 py-0.5 text-[0.6rem] font-bold uppercase tracking-wider rounded-full bg-white/8 text-white/60">
+                    {{ ('home.themes.' ~ article.category ~ '.title')|trans }}
+                </span>
+            </div>
+            <h1 class="font-display text-[1.85rem] sm:text-[2.5rem] font-bold text-white leading-tight">
+                {{ article.getTitle(app.request.locale) }}
+            </h1>
+        </div>
+    </section>
+
+    {# === Article content === #}
+    <section class="py-20 bg-cream">
+        <div class="max-w-3xl mx-auto px-5 sm:px-8 lg:px-10">
+            {# Article card overlapping hero #}
+            <div class="bg-white rounded-2xl border border-cream-dark/50 p-8 sm:p-12 -mt-16 relative z-20">
+                {# Back link #}
+                {% set news_route = app.request.locale == 'en' ? 'app_news_en' : 'app_news' %}
+                <a href="{{ path(news_route) }}" class="group inline-flex items-center gap-2 text-[0.8rem] text-blue hover:text-navy font-semibold mb-8 transition-colors">
+                    <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                    {{ 'news.back'|trans }}
+                </a>
+
+                {# Summary #}
+                <p class="text-[1.05rem] text-navy leading-[1.8] mb-8 font-medium">
+                    {{ article.getSummary(app.request.locale) }}
+                </p>
+
+                <div class="w-12 h-[2px] bg-gradient-to-r from-gold to-transparent mb-8"></div>
+
+                {# Body #}
+                <div class="text-text-muted text-[0.95rem] leading-[1.85] whitespace-pre-line">
+                    {{ article.getContent(app.request.locale) }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,108 @@
+# Navigation
+nav.home: Heem
+nav.news: Noriichten
+nav.contact: Kontakt
+nav.language: EN
+
+# Hero Section
+home.hero.badge: Demokratesch Partei
+home.hero.firstname: Mika
+home.hero.lastname: Ferreira
+home.hero.greeting: Moien, ech sinn
+home.hero.name: Mika Ferreira
+home.hero.tagline: "Är Stëmm fir <em>Kayl-Téiteng</em>"
+home.hero.subtitle: Gemeinderot · DP · Kayl-Téiteng
+home.hero.cta: Meng Themen
+home.hero.cta_primary: Meng Themen
+home.hero.cta_secondary: Kontakt
+home.hero.scroll: Erof scrollen
+
+# About Section
+home.about.label: Iwwer mech
+home.about.headline: "Eng Stëmm, déi aus <em>Erfarung</em> schwätzt."
+home.about.title: Iwwer mech
+home.about.text: >
+    Als Gemeinderot vun der DP zu Kayl-Téiteng setzen ech mech fir eng modern,
+    oppen a sozial Gemeng an. Ech gleewen un eng Politik, déi no bei de Leit ass
+    an déi all Bierger mat abannen hëlt — onofhängeg vun Alter, Hierkonft oder Situatioun.
+home.about.p1: >
+    Als Mëtglied vun der Demokratescher Partei (DP) engagéieren ech mech fir
+    eis Gemeng Kayl-Téiteng — fir eng oppen, modern a sozial Politik, déi
+    all Bierger mat abannen hëlt.
+home.about.p2: >
+    Ech liewen selwer mat Spinaler Muskelatrophie Typ 2 (SMA 2), enger
+    rar Krankheet, déi meng Muskelen beaflosst. Dës Erfarung huet mäi Bléck
+    op d'Welt geprägt — a mäi politesch Engagement. Ech weess aus éischter Hand,
+    wéi wichteg Accessibilitéit, Inklusioun an eng Gemeng ouni Barrièren ass.
+home.about.p3: >
+    Mat mengem Engagement wëll ech weisen, datt Politik vun all Mënsch ka kommen —
+    an datt eise verschiddene Perspektiven eis Gemeinschaft méi staark maachen.
+home.about.card_title: Inklusioun ass keng Optioun
+home.about.card_text: "Et ass e Grondrecht. Eng Gemeng, déi fir jiddereen gebaut ass — ouni Ausnamen."
+home.about.promises_title: Meng Versprechen
+home.about.value_01: "Noper — No bei de Leit, no bei de Suergen."
+home.about.value_02: "DP-Wäerter — Fräiheet, Gerechtegkeet, Solidaritéit."
+home.about.value_03: "Engagement — Mat Häerz an Iwwerzeegung fir eis Gemeng."
+
+# Themes Section
+home.themes.title: Meng Themen
+home.themes.inclusion.title: Inklusioun
+home.themes.inclusion.text: Eng Gemeng, wou jiddereen dobäi ass — mat Accessibilitéit, Integratioun an Zesummenhalt.
+home.themes.inclusion.text_long: >
+    Eng Gemeng, déi fir jiddereen do ass — onofhängeg vun Alter, Hierkonft oder
+    kierperlech Méiglechkeeten. Ech setze mech an fir Accessibilitéit am ëffentleche Raum,
+    Integratioun vun neie Matbierger an e staarken Zesummenhalt tëschent allen Awunner.
+home.themes.youth.title: Jugend
+home.themes.youth.text: Méi Raum, méi Méiglechkeeten a méi Matbestëmmung fir eis jonk Leit.
+home.themes.youth.text_long: >
+    Eis Jonk verdéngen eng Stëmm a Raum fir sech z'entwéckelen. Ech wëll méi
+    Fräizäitméiglechkeeten, besser Bildungsinfrastruktur a méi Participatioun vu jonke
+    Leit an der Kommunalpolitik — well si d'Zukunft vun eiser Gemeng sinn.
+home.themes.housing.title: Wunnen
+home.themes.housing.text: Bezuelbare Wunnraum fir Familljen, Jonker an eeler Matbierger.
+home.themes.housing.text_long: >
+    Bezuelbare Wunnraum ass eng vun de gréisste Suergen. Ech setze mech a fir
+    méi soziale Wunnengsbau, innovativ Wunnprojeten an eng kloer Strategie fir
+    datt Familljen, Jonker an eeler Matbierger zu Kayl-Téiteng bleiwe kënnen.
+home.themes.culture.title: Kultur
+home.themes.culture.text: E reeicht kulturellt Liewen, dat eis Gemeinschaft verbënnt a beräichert.
+home.themes.culture.text_long: >
+    Kultur ass de Kär vun eiser Identitéit. Ech wëll kulturell Veranstaltungen
+    ënnerstëtzen, lokal Kënschtler promouvéieren an Plazen schafen, wou Mënschen
+    sech begéinen — well Kultur eis Gemeng lieweg mécht.
+
+# News (Homepage)
+home.news.title: Noriichten
+home.news.all: All Noriichten
+
+# Contact (Homepage)
+home.contact.label: Kontakt
+home.contact.headline: Schwätzt mat mir.
+home.contact.description: >
+    Hutt Dir eng Fro, eng Iddi oder wëllt Dir einfach schwätzen?
+    Ech freeë mech op Är Noriicht.
+home.contact.email: email@michael-ferreira.com
+home.contact.location: Kayl-Téiteng, Lëtzebuerg
+home.contact.social: "@mikaferreira"
+
+# News
+news.title: Noriichten
+news.read_more: Weiderliesen
+news.back: Zréck zu den Noriichten
+news.published: Publizéiert den
+news.empty: Keng Noriichten am Moment.
+
+# Contact
+contact.title: Kontakt
+contact.intro: Hutt Dir eng Fro oder eng Iddi fir eis Gemeng? Schreift mir!
+contact.form.name: Numm
+contact.form.email: E-Mail
+contact.form.subject: Sujet
+contact.form.message: Är Noriicht
+contact.form.submit: Noriicht schécken
+contact.flash_success: Merci fir Är Noriicht! Ech melle mech bei Iech.
+
+# Footer
+footer.text: "Mika (Michael) Ferreira · DP Kayl-Téiteng · email@michael-ferreira.com"
+footer.party: Demokratesch Partei · Kayl-Téiteng
+footer.copyright: "© %year% Mika Ferreira. All Rechter virbehal."

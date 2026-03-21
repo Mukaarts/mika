@@ -1,0 +1,107 @@
+# Navigation
+nav.home: Home
+nav.news: News
+nav.contact: Contact
+nav.language: LB
+
+# Hero Section
+home.hero.badge: Democratic Party
+home.hero.firstname: Mika
+home.hero.lastname: Ferreira
+home.hero.greeting: Hi, I'm
+home.hero.name: Mika Ferreira
+home.hero.tagline: "Your Voice for <em>Kayl-Téiteng</em>"
+home.hero.subtitle: Municipal Councillor · DP · Kayl-Téiteng
+home.hero.cta: My Topics
+home.hero.cta_primary: My Topics
+home.hero.cta_secondary: Contact
+home.hero.scroll: Scroll down
+
+# About Section
+home.about.label: About me
+home.about.headline: "A voice that speaks from <em>experience</em>."
+home.about.title: About Me
+home.about.text: >
+    As a municipal councillor for the DP in Kayl-Téiteng, I am committed to a modern,
+    open and socially just municipality. I believe in politics that stays close to the people
+    and includes every citizen — regardless of age, origin or situation.
+home.about.p1: >
+    As a member of the Democratic Party (DP), I am committed to our municipality
+    Kayl-Téiteng — for open, modern and social politics that includes every citizen.
+home.about.p2: >
+    I live with Spinal Muscular Atrophy Type 2 (SMA 2), a rare disease that affects
+    my muscles. This experience has shaped my view of the world — and my political
+    engagement. I know firsthand how important accessibility, inclusion and a
+    barrier-free municipality are.
+home.about.p3: >
+    With my commitment, I want to show that politics can come from anyone —
+    and that our diverse perspectives make our community stronger.
+home.about.card_title: Inclusion is not optional
+home.about.card_text: "It is a fundamental right. A municipality built for everyone — without exceptions."
+home.about.promises_title: My Promises
+home.about.value_01: "Neighbour — Close to the people, close to their concerns."
+home.about.value_02: "DP Values — Freedom, justice, solidarity."
+home.about.value_03: "Commitment — With heart and conviction for our municipality."
+
+# Themes Section
+home.themes.title: My Topics
+home.themes.inclusion.title: Inclusion
+home.themes.inclusion.text: A municipality where everyone belongs — with accessibility, integration and social cohesion.
+home.themes.inclusion.text_long: >
+    A municipality that is there for everyone — regardless of age, origin or physical
+    abilities. I advocate for accessibility in public spaces, integration of new
+    residents and strong cohesion between all inhabitants.
+home.themes.youth.title: Youth
+home.themes.youth.text: More space, more opportunities and more participation for our young people.
+home.themes.youth.text_long: >
+    Our young people deserve a voice and space to develop. I want more leisure
+    opportunities, better educational infrastructure and more participation of young
+    people in local politics — because they are the future of our municipality.
+home.themes.housing.title: Housing
+home.themes.housing.text: Affordable housing for families, young people and elderly residents.
+home.themes.housing.text_long: >
+    Affordable housing is one of the biggest concerns. I advocate for more social
+    housing, innovative housing projects and a clear strategy so that families,
+    young people and elderly residents can stay in Kayl-Téiteng.
+home.themes.culture.title: Culture
+home.themes.culture.text: A rich cultural life that connects and enriches our community.
+home.themes.culture.text_long: >
+    Culture is the core of our identity. I want to support cultural events, promote
+    local artists and create spaces where people can meet — because culture
+    brings our municipality to life.
+
+# News (Homepage)
+home.news.title: News
+home.news.all: All News
+
+# Contact (Homepage)
+home.contact.label: Contact
+home.contact.headline: Let's talk.
+home.contact.description: >
+    Do you have a question, an idea or simply want to talk?
+    I look forward to hearing from you.
+home.contact.email: email@michael-ferreira.com
+home.contact.location: Kayl-Téiteng, Luxembourg
+home.contact.social: "@mikaferreira"
+
+# News
+news.title: News
+news.read_more: Read more
+news.back: Back to News
+news.published: Published on
+news.empty: No news at the moment.
+
+# Contact
+contact.title: Contact
+contact.intro: Do you have a question or an idea for our municipality? Write to me!
+contact.form.name: Name
+contact.form.email: Email
+contact.form.subject: Subject
+contact.form.message: Your Message
+contact.form.submit: Send Message
+contact.flash_success: Thank you for your message! I will get back to you.
+
+# Footer
+footer.text: "Mika (Michael) Ferreira · DP Kayl-Téiteng · email@michael-ferreira.com"
+footer.party: Democratic Party · Kayl-Téiteng
+footer.copyright: "© %year% Mika Ferreira. All rights reserved."

@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'news.title'|trans }} — Mika Ferreira{% endblock %}
+
+{% block body %}
+
+    {# === Hero banner === #}
+    <section class="relative pt-36 pb-20 hero-gradient overflow-hidden">
+        <div class="absolute inset-0 hero-pattern"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-5 sm:px-8 lg:px-10 text-center">
+            <p class="section-label justify-center mb-6 text-white/40 before:bg-gold">{{ 'nav.news'|trans }}</p>
+            <h1 class="font-display text-[2.5rem] sm:text-[3.25rem] font-bold text-white leading-tight">
+                {{ 'news.title'|trans }}
+            </h1>
+        </div>
+    </section>
+
+    {# === Articles === #}
+    <section class="py-20 bg-cream">
+        <div class="max-w-4xl mx-auto px-5 sm:px-8 lg:px-10">
+            {% if articles is empty %}
+                <div class="text-center py-16 -mt-20 relative z-20">
+                    <div class="contact-card inline-block p-10 rounded-2xl bg-white border border-cream-dark/50">
+                        <svg class="w-10 h-10 text-text-soft mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"/>
+                        </svg>
+                        <p class="text-text-muted text-[0.95rem]">{{ 'news.empty'|trans }}</p>
+                    </div>
+                </div>
+            {% else %}
+                <div class="space-y-6 -mt-16 relative z-20">
+                    {% for article in articles %}
+                        {% set show_route = app.request.locale == 'en' ? 'app_news_show_en' : 'app_news_show' %}
+                        <a href="{{ path(show_route, {slug: article.slug}) }}" class="news-card group block p-7 sm:p-8 rounded-2xl bg-white border border-cream-dark/50">
+                            <div class="flex flex-wrap items-center gap-3 mb-4">
+                                <time class="text-[0.7rem] text-text-soft tracking-wide" datetime="{{ article.publishedAt|date('Y-m-d') }}">
+                                    {{ article.publishedAt|date('d.m.Y') }}
+                                </time>
+                                <span class="px-2.5 py-0.5 text-[0.65rem] font-bold uppercase tracking-wider rounded-full bg-blue-light text-blue">
+                                    {{ ('home.themes.' ~ article.category ~ '.title')|trans }}
+                                </span>
+                            </div>
+                            <h2 class="font-display text-[1.2rem] sm:text-[1.35rem] font-semibold text-navy mb-3 group-hover:text-blue transition-colors duration-300 leading-snug">
+                                {{ article.getTitle(app.request.locale) }}
+                            </h2>
+                            <p class="text-text-muted text-[0.875rem] leading-[1.7] mb-5">
+                                {{ article.getSummary(app.request.locale) }}
+                            </p>
+                            <span class="inline-flex items-center gap-1.5 text-[0.8rem] text-blue font-semibold group-hover:text-navy transition-colors">
+                                {{ 'news.read_more'|trans }}
+                                <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </section>
+
+{% endblock %}
