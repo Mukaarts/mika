@@ -1,7 +1,5 @@
 {
-  "build/app.css": "/build/app.css",
-  "build/app.js": "/build/app.js",
-  "build/runtime.js": "/build/runtime.js",
-  "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_tailwindcss_index_css-c20fdb.css": "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_tailwindcss_index_css-c20fdb.css",
-  "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_tailwindcss_index_css-c20fdb.js": "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_tailwindcss_index_css-c20fdb.js"
+  "build/app.css": "/build/app.fa83642a.css",
+  "build/app.js": "/build/app.f7615e0c.js",
+  "build/runtime.js": "/build/runtime.e702e4f2.js"
 }
